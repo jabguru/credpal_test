@@ -1,5 +1,6 @@
 import 'package:credpal_test/constants/colors.dart';
 import 'package:credpal_test/widgets/home_header.dart';
+import 'package:credpal_test/widgets/products_list.dart';
 import 'package:credpal_test/widgets/search_products.dart';
 import 'package:flutter/material.dart';
 
@@ -16,24 +17,18 @@ class HomeScreen extends StatelessWidget {
           currentFocus.unfocus();
         }
       },
+      // TODO: LOOK INTO BACKGROUND OF PRODUCT IMAGES
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 0,
           backgroundColor: kHeaderColor,
           elevation: 0.0,
         ),
-        body: Column(
+        body: const Column(
           children: [
-            const HomeHeader(),
-            const SearchProducts(),
-            Container(
-              width: double.infinity,
-              color: kLightPurpleColor,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 16.0,
-              ),
-            ),
+            HomeHeader(),
+            SearchProducts(),
+            ProductsList(),
           ],
         ),
       ),
