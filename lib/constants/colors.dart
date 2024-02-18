@@ -13,6 +13,7 @@ Color kScannerBgColor = const Color(0xFFF4F5FE).withOpacity(0.8);
 const Color kTextFieldTextColor = Color(0xFF9494B8);
 const Color kGreyColor = Color(0xFFC1C1CE);
 const Color kGreyColor2 = Color(0xFFB3B3CC);
+const Color kGreyColor3 = Color(0xFFE8EDFF);
 const Color kGreenColor = Color(0xFF24C78B);
 
 // ? merchant colors
