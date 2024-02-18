@@ -1,4 +1,5 @@
 import 'package:credpal_test/constants/colors.dart';
+import 'package:credpal_test/widgets/featured_merchants.dart';
 import 'package:credpal_test/widgets/home_header.dart';
 import 'package:credpal_test/widgets/products_list.dart';
 import 'package:credpal_test/widgets/search_products.dart';
@@ -17,7 +18,6 @@ class HomeScreen extends StatelessWidget {
           currentFocus.unfocus();
         }
       },
-      // TODO: LOOK INTO BACKGROUND OF PRODUCT IMAGES
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 0,
@@ -27,8 +27,17 @@ class HomeScreen extends StatelessWidget {
         body: const Column(
           children: [
             HomeHeader(),
-            SearchProducts(),
-            ProductsList(),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SearchProducts(),
+                    ProductsList(),
+                    FeaturedMerchants(),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
